@@ -1,5 +1,3 @@
-const text = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
-
 const countWords = text => text.split(' ').length;
 
 function lengthWithoutSigns(text) {
