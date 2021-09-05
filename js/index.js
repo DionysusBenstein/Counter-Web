@@ -1,37 +1,7 @@
-const countWords = text => text.split(' ').length;
+const checkbox = document.querySelector('.controls__checkbox');
+const checkmark = document.querySelector('.controls__checkmark');
 
-function lengthWithoutSigns(text) {
-    const signs = "!\"#$%^&*()+=_'?.,|\\/~№:;@[]{}«»<>©";
-    let textLength = text.length;
-
-    for (let i = 0; i < text.length; i++) {
-        for (let j = 0; j < signs.length; j++) {
-            if (text[i] === signs[j])
-                textLength--;
-        }
-    }
-
-    return textLength;
-}
-
-function lengthWithoutSpaces(text) {
-    let textLength = text.length;
-
-    for (let i = 0; i < text.length; i++) {
-        if (text[i] === ' ')
-            textLength--;
-    }
-
-    return textLength;
-}
-
-function countLines(text) {
-    let counter = 1;
-
-    for (let i = 0; i < text.length; i++) {
-        if (text[i] === '\n')
-            counter++;
-    }
-
-    return counter;
-}
+checkbox.addEventListener('click', () => {
+    checkmark.classList.add('click-anim');    
+    setTimeout(() => checkmark.classList.remove('click-anim'), 100);
+});

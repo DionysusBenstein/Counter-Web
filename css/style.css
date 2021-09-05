@@ -57,8 +57,8 @@ body {
 
 .main-text-input {
     width: 100%;
-    height: 500px;
-    margin: 20px 0;
+    height: 60vh;
+    margin: 25px 0 40px;
     border: none;
     border-bottom: 2px solid var(--primary-color);
     outline: none;
@@ -101,6 +101,19 @@ body {
     border-radius: 2px;
 }
 
+.click-anim {
+    animation: push .3s ease-in-out;
+}
+
+@keyframes push {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .controls__checkmark::before {
     content: '';
     position: absolute;
@@ -113,6 +126,7 @@ body {
     transform-origin: top right;
     transform: rotate(45deg);
     opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .controls__checkmark::after {
@@ -126,4 +140,5 @@ body {
     background: #fff;
     transform: rotate(-45deg);
     opacity: 0;
+    transition: all 0.3s ease-in-out;
 } 
