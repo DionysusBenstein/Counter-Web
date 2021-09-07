@@ -3,7 +3,15 @@ const counterLabel = document.querySelector('.controls__counter');
 const labels = document.querySelectorAll('.controls__label');
 const checkboxes = document.querySelectorAll('.controls__checkbox');
 
+function isAllChecked(checkboxes) {
+    const checkboxesArr = Array.prototype.slice.call(checkboxes);    
+    return checkboxesArr.every(checkbox => checkbox.checked);
+}
+
 mainTextInput.addEventListener('input', () => {
+    if (!isAllChecked(checkboxes)) 
+        counterLabel.innerHTML = mainTextInput.value.length;
+
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
             switch (checkbox.value) {
@@ -28,7 +36,7 @@ mainTextInput.addEventListener('input', () => {
                     console.log('length');
             }
         }
-    });    
+    });
 });
 
 labels.forEach(label => {
