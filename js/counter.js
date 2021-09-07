@@ -1,4 +1,4 @@
-const countWords = text => text.split(' ').length;
+const countWords = text => text ? text.split(' ').length : '0';
 
 function lengthWithoutSigns(text) {
     const signs = "!\"#$%^&*()+=_'?.,|\\/~№:;@[]{}«»<>©";
@@ -10,7 +10,7 @@ function lengthWithoutSigns(text) {
                 textLength--;
         }
     }
-    return textLength;
+    return textLength;  
 }
 
 function lengthWithoutSpaces(text) {

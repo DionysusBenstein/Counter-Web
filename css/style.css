@@ -67,14 +67,14 @@ body {
 
 /* Controls */
 
+.controls {
+    margin: 0 0 35px 0;
+}
+
 .controls__label {
     display: flex;
     align-items: center;
     user-select: none;
-}
-
-.controls__text {
-
 }
 
 .controls__checkbox {
@@ -159,4 +159,20 @@ body {
     width: 33.33%;
     font-size: 52px;
     text-align: center;
+}
+
+/* Responsibility */
+
+@media (max-width: 400px) {
+    .controls__row {
+        flex-direction: column-reverse;
+    }
+
+    .controls__counter {
+        margin: 0 0 35px 0;
+    }
+
+    .controls__grid, .controls__counter {
+        width: 100%;
+    }
 }
