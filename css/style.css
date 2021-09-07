@@ -126,7 +126,7 @@ body {
     transform-origin: top right;
     transform: rotate(45deg);
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .controls__checkmark::after {
@@ -140,5 +140,23 @@ body {
     background: #fff;
     transform: rotate(-45deg);
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 } 
+
+.controls__row {
+    display: flex;
+    align-items: center;
+}
+
+.controls__grid {
+    width: 66.66%;
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(auto-fill, 250px);
+}
+
+.controls__counter {
+    width: 33.33%;
+    font-size: 52px;
+    text-align: center;
+}
